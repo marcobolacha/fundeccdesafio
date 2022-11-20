@@ -1,0 +1,75 @@
+
+
+<form #f = "ngForm" (ngSubmit)="onSubmit()">
+    
+    <p></p>
+
+    <div class="form-group">
+        <label for="nome">Nome: </label>
+        <input type="text" class="form-control" name = "nome"
+            id="nome" placeholder="Nome" [(ngModel)]="usuario.nome">
+    </div>
+
+    <p></p>
+
+    <div class="form-group">
+        <label for="cpf"> CPF: </label>
+        <input type="text" class="form-control" name = "cpf"
+            id="cpf" placeholder="CPF"  [(ngModel)]="usuario.cpf">      
+    </div>
+
+    <p></p>
+            
+    <div class="form-group">
+        <label for="dtnas">Data Nascimento: </label>
+        <input type="text" class="form-control" name = "dtnas"
+            id="dtnas" placeholder="Data Nascimento"  [(ngModel)]="usuario.dtnas">      
+    </div>
+    
+    <p></p>
+    
+    <div class="form-group">    
+        <label for="sexo"> Sexo: </label>
+        <input type="text" class="form-control" name = "sexo"
+            id="sexo" placeholder="Sexo"  [(ngModel)]="usuario.sexo">      
+    </div>
+            
+    <p></p>
+    
+    <div class="form-group">
+        <label for="cargo">Cargo: </label>
+        <input type="text" class="form-control" name = "cargo"
+            id="cargo" placeholder="Cargo"  [(ngModel)]="usuario.cargo">      
+    </div>
+
+    <p></p>
+
+    <div class="form-group">
+        <label for="perfil">Perfil: </label>
+        <input list="perfil" class="form-control" name = "perfil"
+        placeholder="Perfil"  [(ngModel)]="usuario.perfil">
+        <datalist id="perfil">
+            <option value="Perfil 1">
+            <option value="Perfil 2">
+            <option value="Perfil 3">
+            <option value="Perfil 4">
+            <option value="Perfil 5">
+        </datalist>
+    </div>
+        
+    <p></p>
+
+    <p></p>
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+    <p></p>
+    <p></p>
+
+
+    <app-perfil-form></app-perfil-form>
+
+</form>
+
+
+
+
